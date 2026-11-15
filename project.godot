@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Rebound Tactics"
-run/main_scene="uid://c2dm7sx8rtkvx"
+run/main_scene="uid://cgsjm3jiv0poc"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 boot_splash/bg_color=Color(0.105882354, 0.11372549, 0.14901961, 1)
 boot_splash/show_image=false
