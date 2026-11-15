@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://4gmb4fpr7j8m"]
+
+[ext_resource type="Script" uid="uid://cknfo57eo5p0h" path="res://scripts/hud.gd" id="1_0mwgc"]
+
+[node name="HUD" type="CanvasLayer" unique_id=792033472]
+script = ExtResource("1_0mwgc")
+
+[node name="Root" type="Control" parent="." unique_id=2027317071]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="MarginContainer" parent="Root" unique_id=938245882]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBox" type="HBoxContainer" parent="Root/TopBar" unique_id=865806078]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="LevelLabel" type="Label" parent="Root/TopBar/HBox" unique_id=1779130833]
+layout_mode = 2
+text = "Level 1"
+
+[node name="ShotsLabel" type="Label" parent="Root/TopBar/HBox" unique_id=1726637232]
+layout_mode = 2
+text = "Shots: 0"
+
+[node name="BouncesLabel" type="Label" parent="Root/TopBar/HBox" unique_id=1293002667]
+layout_mode = 2
+text = "Bounces: 4"
+
+[node name="Spacer" type="Control" parent="Root/TopBar/HBox" unique_id=2074515685]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PauseButton" type="Button" parent="Root/TopBar/HBox" unique_id=977527257]
+layout_mode = 2
+focus_mode = 0
+text = "Pause
+"
+
+[node name="RestartButton" type="Button" parent="Root/TopBar/HBox" unique_id=1942313451]
+layout_mode = 2
+focus_mode = 0
+text = "Restart"
+
+[node name="Toast" type="Label" parent="Root" unique_id=459026582]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dim" type="ColorRect" parent="Root" unique_id=2018396700]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="WinPanel" type="PanelContainer" parent="Root" unique_id=2134149690]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Root/WinPanel" unique_id=1269489231]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="Root/WinPanel/VBox" unique_id=494602915]
+layout_mode = 2
+text = "Level Clear!"
+horizontal_alignment = 1
+
+[node name="Stars" type="HBoxContainer" parent="Root/WinPanel/VBox" unique_id=238997378]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Star1" type="TextureRect" parent="Root/WinPanel/VBox/Stars" unique_id=1940491249]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star2" type="TextureRect" parent="Root/WinPanel/VBox/Stars" unique_id=514556896]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Star3" type="TextureRect" parent="Root/WinPanel/VBox/Stars" unique_id=1169877381]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ShotsText" type="Label" parent="Root/WinPanel/VBox" unique_id=48190746]
+layout_mode = 2
+text = "Shots: 0"
+
+[node name="Buttons" type="HBoxContainer" parent="Root/WinPanel/VBox" unique_id=1625477160]
+layout_mode = 2
+theme_override_constants/separation = 161
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="Root/WinPanel/VBox/Buttons" unique_id=1141889907]
+layout_mode = 2
+text = "Retry"
+
+[node name="NextButton" type="Button" parent="Root/WinPanel/VBox/Buttons" unique_id=1326654999]
+layout_mode = 2
+text = "Next Level
+"
+
+[node name="PausePanel" type="PanelContainer" parent="Root" unique_id=951885465]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -23.5
+offset_right = 20.0
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="Root/PausePanel" unique_id=1681678176]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Title" type="Label" parent="Root/PausePanel/VBox" unique_id=191492421]
+layout_mode = 2
+text = "Paused
+"
+horizontal_alignment = 1
+
+[node name="PauseRestartButton" type="Button" parent="Root/PausePanel/VBox" unique_id=951561810]
+layout_mode = 2
+text = "Restart"
+
+[node name="ResumeButton" type="Button" parent="Root/PausePanel/VBox" unique_id=98744010]
+layout_mode = 2
+text = "Resume
+"

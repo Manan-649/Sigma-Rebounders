@@ -4,6 +4,8 @@ extends Node2D
 signal won(shots: int, stars: int)
 signal attempt_failed(targets_left: int)
 
+const HUD_SCENE := preload("res://scenes/ui/hud.tscn")
+
 @export_range(3, 6) var max_bounces := 4
 @export var shots_for_3_stars := 1
 @export var shots_for_2_stars := 2
@@ -12,6 +14,7 @@ signal attempt_failed(targets_left: int)
 
 var targets_left := 0
 var has_won := false
+var hud: HUD
 
 
 func _ready() -> void:
@@ -22,7 +25,9 @@ func _ready() -> void:
 		targets_left += 1
 		t.hit.connect(_on_target_hit)
 
-	print("Level ready: ", targets_left, " targets, ", max_bounces, " bounces")
+	hud = HUD_SCENE.instantiate()
+	add_child(hud)
+	hud.setup(self)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -32,7 +37,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _on_target_hit(_target: Target) -> void:
 	targets_left -= 1
-	print("Target hit! Left: ", targets_left)
 	if targets_left == 0:
 		_win()
 
@@ -40,7 +44,6 @@ func _on_target_hit(_target: Target) -> void:
 func _on_ball_lost() -> void:
 	if has_won:
 		return
-	print("Bounce back! Targets left: ", targets_left)
 	attempt_failed.emit(targets_left)
 
 
@@ -56,5 +59,4 @@ func _win() -> void:
 	elif shots <= shots_for_2_stars:
 		stars = 2
 
-	print("WIN! Shots: ", shots, "  Stars: ", stars)
 	won.emit(shots, stars)
