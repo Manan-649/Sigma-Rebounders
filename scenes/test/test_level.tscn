@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://c2dm7sx8rtkvx"]
 
 [ext_resource type="PackedScene" uid="uid://hujyldpq2w63" path="res://scenes/game/wall.tscn" id="1_euepx"]
+[ext_resource type="Script" uid="uid://clgmyfa1ij45o" path="res://scripts/levels.gd" id="1_rnfgp"]
 [ext_resource type="PackedScene" uid="uid://df1l6nk8pw6bn" path="res://scenes/game/ball.tscn" id="2_spoc0"]
+[ext_resource type="PackedScene" uid="uid://jf1qd0pdu7dp" path="res://scenes/game/launcher.tscn" id="3_fn47k"]
+[ext_resource type="PackedScene" uid="uid://bdjvrpbuxhce0" path="res://scenes/game/target.tscn" id="5_mr7is"]
 
 [node name="TestLevel" type="Node2D" unique_id=257944419]
+script = ExtResource("1_rnfgp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=535047173]
 position = Vector2(640, 360)
@@ -36,5 +40,15 @@ size = Vector2(32, 192)
 
 [node name="Ball" parent="." unique_id=759472563 instance=ExtResource("2_spoc0")]
 position = Vector2(300, 200)
-test_launch = Vector2(500, -350)
-test_bounces = 6
+
+[node name="Launcher" parent="." unique_id=694937241 instance=ExtResource("3_fn47k")]
+position = Vector2(160, 360)
+
+[node name="Target" parent="." unique_id=1211866163 instance=ExtResource("5_mr7is")]
+position = Vector2(500, 150)
+
+[node name="Target2" parent="." unique_id=1799764303 instance=ExtResource("5_mr7is")]
+position = Vector2(1000, 150)
+
+[node name="Target3" parent="." unique_id=1065060425 instance=ExtResource("5_mr7is")]
+position = Vector2(1100, 600)

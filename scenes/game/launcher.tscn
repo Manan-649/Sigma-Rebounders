@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://jf1qd0pdu7dp"]
+
+[ext_resource type="Script" uid="uid://cxbbxxidsjryh" path="res://scripts/launcher.gd" id="1_qu1u3"]
+[ext_resource type="Texture2D" uid="uid://bocityxu70dpo" path="res://sprites/launcher.png" id="1_rtl3l"]
+
+[node name="Launcher" type="Node2D" unique_id=694937241]
+script = ExtResource("1_qu1u3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=361765609]
+texture = ExtResource("1_rtl3l")
+
+[node name="AimLine" type="Line2D" parent="." unique_id=1724369409]
+width = 3.0
