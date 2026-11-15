@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://chsaefhlcxoo1"]
+
+[ext_resource type="PackedScene" uid="uid://hujyldpq2w63" path="res://scenes/game/wall.tscn" id="1_cm567"]
+[ext_resource type="PackedScene" uid="uid://df1l6nk8pw6bn" path="res://scenes/game/ball.tscn" id="2_s1s71"]
+
+[node name="TestLevel" type="Node2D" unique_id=257944419]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=535047173]
+position = Vector2(640, 360)
+
+[node name="Walls" type="Node2D" parent="." unique_id=2042345050]
+
+[node name="WallTop" parent="Walls" unique_id=624949503 instance=ExtResource("1_cm567")]
+position = Vector2(640, 16)
+size = Vector2(1280, 32)
+
+[node name="WallBottom" parent="Walls" unique_id=1869397363 instance=ExtResource("1_cm567")]
+position = Vector2(640, 704)
+size = Vector2(1280, 32)
+
+[node name="WallLeft" parent="Walls" unique_id=826655260 instance=ExtResource("1_cm567")]
+position = Vector2(16, 360)
+size = Vector2(32, 736)
+
+[node name="WallRight" parent="Walls" unique_id=298330815 instance=ExtResource("1_cm567")]
+position = Vector2(1264, 360)
+size = Vector2(32, 736)
+
+[node name="WallSticky" parent="Walls" unique_id=1883590513 instance=ExtResource("1_cm567")]
+position = Vector2(350, 114.000015)
+rotation = -0.30019662
+size = Vector2(192, 32)
+
+[node name="WallBouncy" parent="Walls" unique_id=1201636558 instance=ExtResource("1_cm567")]
+position = Vector2(612.99994, 474)
+rotation = 1.8081611
+size = Vector2(32, 192)
+
+[node name="Ball" parent="." unique_id=759472563 instance=ExtResource("2_s1s71")]
+position = Vector2(240, 278)
