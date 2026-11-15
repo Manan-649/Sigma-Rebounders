@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://hujyldpq2w63"]
+
+[ext_resource type="Script" uid="uid://dbogltbo1ccof" path="res://scripts/wall.gd" id="1_58267"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58267"]
+size = Vector2(128, 32)
+
+[node name="Wall" type="StaticBody2D" unique_id=624949503]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_58267")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2049560223]
+shape = SubResource("RectangleShape2D_58267")
+
+[node name="Placeholder" type="ColorRect" parent="." unique_id=628402577]
+offset_left = -64.0
+offset_top = -16.0
+offset_right = 64.0
+offset_bottom = 16.0
+mouse_filter = 2
+color = Color(0.5411765, 0.56078434, 0.6392157, 1)
+
+[node name="Art" type="NinePatchRect" parent="." unique_id=453059090]
+visible = false
+offset_left = -64.0
+offset_top = -16.0
+offset_right = 64.0
+offset_bottom = 16.0
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
