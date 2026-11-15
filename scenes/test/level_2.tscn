@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://hujyldpq2w63" path="res://scenes/game/wall.tscn" id="1_yqu03"]
 [ext_resource type="PackedScene" uid="uid://df1l6nk8pw6bn" path="res://scenes/game/ball.tscn" id="2_8pd4c"]
+[ext_resource type="PackedScene" uid="uid://jf1qd0pdu7dp" path="res://scenes/game/launcher.tscn" id="4_48xo8"]
+[ext_resource type="PackedScene" uid="uid://bdjvrpbuxhce0" path="res://scenes/game/target.tscn" id="5_8ndjn"]
 
 [node name="TestLevel" type="Node2D" unique_id=257944419]
 
@@ -37,3 +39,19 @@ size = Vector2(32, 192)
 
 [node name="Ball" parent="." unique_id=759472563 instance=ExtResource("2_8pd4c")]
 position = Vector2(240, 278)
+
+[node name="Launcher" parent="." unique_id=694937241 instance=ExtResource("4_48xo8")]
+position = Vector2(118, 324)
+
+[node name="Target" parent="." unique_id=1211866163 instance=ExtResource("5_8ndjn")]
+position = Vector2(545, 455)
+
+[node name="Target2" parent="." unique_id=686750125 instance=ExtResource("5_8ndjn")]
+position = Vector2(380, 215)
+
+[node name="Target3" parent="." unique_id=550996354 instance=ExtResource("5_8ndjn")]
+position = Vector2(524, 311)
+
+[node name="Wall" parent="." unique_id=768370418 instance=ExtResource("1_yqu03")]
+position = Vector2(334, 146)
+rotation = -0.59864795

@@ -31,24 +31,26 @@ position = Vector2(1264, 360)
 size = Vector2(32, 736)
 
 [node name="WallSticky" parent="Walls" unique_id=1883590513 instance=ExtResource("1_euepx")]
-position = Vector2(480, 560)
+position = Vector2(1051, 133)
+rotation = -2.0717058
 size = Vector2(192, 32)
 
 [node name="WallBouncy" parent="Walls" unique_id=1201636558 instance=ExtResource("1_euepx")]
-position = Vector2(800, 360)
+position = Vector2(322, 593.99994)
+rotation = 2.3928463
 size = Vector2(32, 192)
 
 [node name="Ball" parent="." unique_id=759472563 instance=ExtResource("2_spoc0")]
 position = Vector2(300, 200)
 
 [node name="Launcher" parent="." unique_id=694937241 instance=ExtResource("3_fn47k")]
-position = Vector2(160, 360)
+position = Vector2(117, 129)
 
 [node name="Target" parent="." unique_id=1211866163 instance=ExtResource("5_mr7is")]
-position = Vector2(500, 150)
+position = Vector2(446, 438)
 
 [node name="Target2" parent="." unique_id=1799764303 instance=ExtResource("5_mr7is")]
-position = Vector2(1000, 150)
+position = Vector2(798, 126)
 
 [node name="Target3" parent="." unique_id=1065060425 instance=ExtResource("5_mr7is")]
-position = Vector2(1100, 600)
+position = Vector2(753, 378)
