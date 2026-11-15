@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dq18yj274xecn"
-path="res://.godot/imported/wall_sticky.png-c39c7683719cccac2b82a50586347505.ctex"
+uid="uid://bvbfu774o6lk0"
+path="res://.godot/imported/bg_main.png-01f7f0ba6272e9350774e39f87002cd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wall_sticky.png"
-dest_files=["res://.godot/imported/wall_sticky.png-c39c7683719cccac2b82a50586347505.ctex"]
+source_file="res://sprites/bg_main.png"
+dest_files=["res://.godot/imported/bg_main.png-01f7f0ba6272e9350774e39f87002cd2.ctex"]
 
 [params]
 
